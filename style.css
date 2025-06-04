@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+/********* HEADER *********/
+#mainHeader{
+    background-color: rgb(207,217,201);
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:80px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#mainHeader h1 {
+    font-weight: 400;
+    padding-left: 40px;
+}
+
+a {
+    text-decoration: none;
+    padding-right: 20px;
+    color: rgba(255, 255, 255, 0.808);
+    font-size: 1.5em;
+}
+
+/********* page ACCUEIL *********/
+#mainAccueil{
+    background-image: url("https://cdn.pixabay.com/photo/2024/03/07/05/35/flower-8617708_1280.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.container {
+  width: 100%;  /* forcer container à rester stable sinon p bouge*/
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container h1{
+    color: rgb(67,83,57);
+    text-transform: uppercase;
+    font-weight:400;
+    font-size:4em;
+    margin-top:60px;
+    margin-bottom: 15px;
+    background-color: white;
+    display: inline-block; /* important pour que le fond suive le texte */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container p{
+    font-size:2em;
+    margin-top:40px;
+    color: rgb(55, 56, 59);
+    max-width: 800px;
+    background-color: rgb(229, 247, 233);
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 1000ms;
+}
+
+.container p:hover{
+    background-color: rgb(248, 163, 177);
+    color: white;
+}
+/*********FOOTER *********/
+ #mainFooter {
+    font-weight: bold;
+    background-color: rgb(207,217,201);
+    color:rgb(119, 114, 114);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align:center;
+    height:60px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+ }
+/********* RESPONSIVE MOBILE *********/    
+@media screen and (max-width: 768px) {
+    header {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+        margin: 5px 0;
+    }
+
+    .container {
+        margin:10px;
+        font-size:8px;
+    }
+    .container p{
+        padding:10px;
+    }
+
+    #mainFooter {
+        height:30px;
+        font-size: 0.8rem;
+    }
+}
+/************ page A PROPOS*******************/
+#aboutMe h1, #myPortfolio h1, #myContact h1{
+    padding-top: 110px;
+    padding-bottom: 30px;
+    font-size: 3.8em;
+    text-align: center;
+}
+
+#aboutMe{
+    background-image: url("https://cdn.pixabay.com/photo/2024/03/07/05/35/flower-8617708_1280.jpg");
+    background-size: cover;
+    min-height:100vh; /* permet au  contenu de déborder */
+    height:auto;
+    overflow:visible;
+    margin-bottom:60px; /* sinon n'affiche pas le bas car footer fixed */
+}
+
+ .division{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 2.2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+    color:rgb(141, 138, 138);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);  
+}
+
+.division h2{
+    padding-bottom: 30px;
+    color: rgb(87, 86, 86);
+}
+
+.article {
+    height: auto; 
+}
+
+.division img {
+    width:100%;
+    height: auto;
+    border-radius: 10px;  
+}
+
+/********* responsive *********/
+@media (max-width: 768px) {
+.division {
+    grid-template-columns: 1fr;
+  }
+.division img {
+    justify-self: center;
+  }
+}
+
+/************ page PORTFOLIO *****************/
+
+#myPortfolio{
+    background-image: url("https://cdn.pixabay.com/photo/2024/03/07/05/35/flower-8617708_1280.jpg");
+    background-size: cover;
+    min-height:100vh; 
+    height:auto;
+    overflow:visible; 
+    padding-bottom: 80px; 
+}
+
+.portfolio-item img{
+    border-radius: 0;
+}
+
+.portfolio-item{
+    padding:5px;
+    background-color:rgb(114, 141, 98);
+    color:#F9F9F9;
+    cursor:pointer;
+    transform: scale(1);
+    transition: all 600ms;
+}
+
+.portfolio-item:hover{
+    background-color: rgb(248, 163, 177);
+    color: white;
+    transform: scale(1.05);
+}
+#divButtons{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+button{
+    margin:20px;
+    width:80px;
+    height:40px;
+}
+/************ page CONTACT *****************/
+#myContact {
+    background-image: url("https://cdn.pixabay.com/photo/2024/03/07/05/35/flower-8617708_1280.jpg");
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* pas min-height car texte trop court*/
+}
+
+#myContact form{
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom:80px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+form label,form input,form textarea {
+    display: block; /* block: affiche les uns en dessous des autres, alignées sur le bord gauche*/
+    width: 80%;
+    height:20px;
+    margin-bottom: 0.5rem;
+}
+
+form input,form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem; 
+}
+
+form textarea{
+    height: 100px;
+}
+
+form button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: rgb(106, 128, 93);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color:rgb(248, 163, 177);
+}
+
+/********* responsive *********/
+@media screen and (max-width: 768px) {
+    #myContact form{
+        width: 85%;
+        padding: 15px;
+        margin-bottom: 60px;
+    }  
+
+    #aboutMe h1, #myPortfolio h1, #myContact h1{
+        font-size: 2.8em;
+        margin-top:20px;
+    }
+}
